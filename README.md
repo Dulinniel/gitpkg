@@ -64,4 +64,4 @@ cd CargoBay                   # Congrats, you are in CargoBay
 
 ---
 
-![image][https://brainmade.org/white-logo.png]
+![image](https://brainmade.org/white-logo.png)
