@@ -5,6 +5,16 @@ It is supposed to be a wrapper for `git` from the TTY.
 
 ---
 
+## Summary
+
+- [Syntax](#Command Syntax)
+- [Features](#Features)
+- [Usage](#Usage)
+- [Compilation](#Compilation)
+    - [Depedencies](#Depedencies)
+    - [Process](#Process)
+- [TOOD](#TODO)
+
 ## Command Syntax
 
 ```bash
@@ -15,12 +25,12 @@ gitpkg get <repo>       # Clone the repo using `git`
 gitpkg help             # Display an help message
 ```
 
-## Fonctionnalités 
+## Features
 
-| Feature                  | Détail                                                     |
+| Feature                  | Detail                                                     |
 | ------------------------ | ---------------------------------------------------------- |
-| Fetch                    | Accéder à l'API de Github et trouver des repos             |
-| README Visualization     | Afficher le README d'un repo, s'il existe                  |
+| Fetch                    | Use Github API to get repo details                         |
+| README Visualization     | Display the README of a repo, if it exists                 |
 | View in lynx             | Open the repo in Lynx Browser                              |
 | Download                 | `git clone`                                                |
 | GUI                      | No.                                                        |
@@ -50,9 +60,21 @@ gitpkg get mattt/CargoBay     # Clone the repo
 cd CargoBay                   # Congrats, you are in CargoBay 
 ```
 
-## Screenshots 
+## Compilation
 
-*Later, later*
+### Depdencies:
+
+- curl ( And I mean curl, not libcurl )
+- grep
+- cut
+- git
+- lynx 
+- gcc
+- make
+
+### Process: 
+
+To compile it, just use `make` and the executable will be found at `build/bin`
 
 ## TODO
 
