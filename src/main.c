@@ -17,8 +17,9 @@ int main(int argc, const char *argv[])
 
   // Lookup table
   option options[] = {
-    { "search", 1 }, { "read", 2 }, { "see", 3 }, { "get", 4 },
-    { "help", 5 }
+    { "search", CMD_SEARCH }, { "read", CMD_READ }, 
+    { "see", CMD_SEE }, { "get", CMD_GET },
+    { "help", CMD_HELP }
   };
 
   // Magic sizeof calculation
@@ -34,22 +35,22 @@ int main(int argc, const char *argv[])
     return -1;
   }
 
-  switch ( selected_option->value )
+  switch ( selected_option->instruction )
   {
-    case 1:
+    case CMD_SEARCH:
       find_package(argv[2]);
       break;
-    case 2:
+    case CMD_READ:
       display_readme(argv[2]);
       break;
-    case 3:
+    case CMD_SEE:
       goto_repo(argv[2]);
       break;
-    case 4:
+    case CMD_GET:
       download_repo(argv[2]);
       break;
     // Fallback to default case if help is invoked
-    case 5:
+    case CMD_HELP:
     default:
       display_help();
       break;
