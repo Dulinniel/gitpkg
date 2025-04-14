@@ -11,8 +11,8 @@
  *  -> size ( short ) The size of the option
  *  -> key ( const char* ) The term we are looking for
  * @return:
- *  1. Pointer to the found element in the table ( &options[i] }
- *  2. NULL pointer { NULL )
+ *  1. Pointer to the found element in the table ( &options[i] )
+ *  2. NULL pointer ( NULL )
  * @TODO: Make it a while loop to avoid early return technique
  * */
 option* linear_search(option* options, short size, const char* key)
